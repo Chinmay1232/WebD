@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+.container
+{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hide
+{
+    display: none;
+}
+
+h1
+{
+    position: relative;
+}
+
+h2
+{
+    margin: 50px;
+    position: absolute;
+    top: 0;
+}
+.play
+{
+    width: 306px;
+    height: 306px;
+    /* background: plum; */
+    display: flex;
+    flex-direction: column;
+}
+
+.image
+{
+    width: 100px;
+    height: 100px;
+}
+
+.button button
+{
+    margin-top: 50px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: black;
+    color: white;
+
+}
+
+.transiton
+{
+    transition: 2s;
+}
+
+button:hover
+{
+    background: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.row
+{
+    display: flex;
+    height: 100px;
+}
+
+.box
+{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    transition: 1s;
+}
+
+.bottom
+{
+    border-bottom: 3px solid black;
+}
+.right
+{
+    border-right: 3px solid black;
+}
+
+
