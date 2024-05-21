@@ -1,59 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  min-width: 300px;
+  height: fit-content;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: medium;
+  margin-bottom: 10px;
+  font-weight: 300;
+  /* cursor:text */
+}
+
+#loading-author
 {
-    background: darksalmon;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
+  width: 40%;
+  height: 20px;
 }
-
-h1
+#loading-heading
 {
-    position: absolute;
-    top: 0;
-    margin-top: 60px;
+  margin: auto;
+  width: 35%;
+  height: 25px;
+  margin-bottom: 10px;
 }
 
-.container
+#author
 {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+  font-weight: 300;
+  /* color: hotpink; */
 }
 
-.box
+.hide
 {
-    max-width: 50%;  
-    height: fit-content;
-    background: white;
-    border-radius: 30px;
-    padding: 30px;
+  display: none;
 }
 
-button
-{
-    padding: 7px;
-    border-radius: 10px;
-    border: none;
-    background: black;
-    color: white;
+.background-masker {
+  background-color: #fff;
+  position: absolute;
 }
 
-.author
-{
-    text-align: end;
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
 }
 
-@media screen and (max-width: 600px) {
-    .box
-    {
-        max-width: 80%; 
-        height: fit-content;
-        background: white;
-        border-radius: 30px;
-        padding: 30px;
-        transition: 2s;
-    }
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 70px;
+  position: relative;
+  border-radius: 10px;
 }
 
+.underline {
+  background: 
+    linear-gradient(to right, rgba(100, 200, 200, 1), rgba(100, 200, 200, 1)),
+    linear-gradient(to right, rgba(255, 0, 0, 1), rgba(255, 0, 180, 1), rgba(0, 100, 200, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.underline:hover,
+.underline:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}

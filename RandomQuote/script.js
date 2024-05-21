@@ -1,17 +1,21 @@
-
 let url = "https://api.quotable.io/random"
-const quote = document.querySelector("p")
-const btn = document.querySelector("button")
+const quote = document.querySelector("#quote")
+const author = document.querySelector("#author")
+const loading= document.getElementsByClassName("animated-background")
+const heading= document.getElementById("heading")
 
-let text = ""
+
 const getQuote = async() => {
-    let data = await fetch(url)
-    let respose = await data.json()
-    text = respose.content;
-    quote.innerHTML = text
+    let get = await fetch(url)
+    let data = await get.json()
+
+    quote.innerHTML = data.content
+    author.innerHTML = data.author
+    for(let i = 0; i < loading.length; i++)
+    {
+        loading[i].classList.add("hide")
+    }
+    heading.classList.remove("hide")
 }
 
-
 getQuote()
-btn.addEventListener("click",getQuote)
-
