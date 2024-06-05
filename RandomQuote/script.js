@@ -40,10 +40,13 @@ btn.addEventListener("click", async() => {
 
     quote.classList.remove("hide");
     author.classList.remove("hide");
-
-
-
-    
+  
 })
+
+
+author.addEventListener("click", async() => {
+    console.log(quote.innerHTML);
+})
+
 
 getQuote()
